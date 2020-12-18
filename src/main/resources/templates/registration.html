@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<meta charset="ISO-8859-1">
+	    <title>User Survey Management | Registration</title>
+	    <link rel="stylesheet" type="text/css" href="/webjars/bootstrap/css/bootstrap.min.css">
+	   	 <script src="/webjars/jquery/2.2.4/jquery.min.js"></script>
+	   	 <script src="/webjars/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+	   	 <script src="/webjars/popper.js/1.14.3/umd/popper.min.js"></script>		
+		 <script src="/user_lib.js"></script>
+	</head>
+	<body>
+		<br>
+		<div class="container text-center">
+			<div>
+				<h4>New User Registration</h4>
+			</div><br>
+			<div class="container text-center">
+				<div>
+					<h6>------------------------------------------------------------------------------------------</h6>
+				</div>
+			</div>
+							
+			<form id="formUserRegistration" style="max-width: 600px; margin: 0 auto;">   <!-- th:object="${user}" -->
+				<div class="m-3">
+					<div class="form-group row">
+						<label class="col-form-label col-4">First Name</label>
+						<div class="col-6">
+							<input type="text" class="form-control" id="firstName" placeholder="Enter First Name" required minlength=2 maxlength=20> <!-- th:field="*{firstName}" -->
+						</div>
+					</div>
+					
+					<div class="form-group row">
+						<label class="col-form-label col-4">Last Name</label>
+						<div class="col-6">
+							<input type="text" class="form-control" id="lastName" placeholder="Enter Last Name" required minlength=2 maxlength=20> <!-- th:field="*{lastName}" -->
+						</div>
+					</div>
+					
+					<div class="form-group row">
+						<label class="col-form-label col-4">Email ID</label>
+						<div class="col-6">
+							<input type="email" class="form-control" id="emailId" placeholder="Enter Email Id" required> <!-- th:field="*{emailId}" -->
+						</div>
+					</div>
+					
+					<div class="form-group row">
+						<label class="col-form-label col-4">Mobile No</label>
+						<div class="col-6">
+							<input type="mobile" class="form-control" id="mobile" placeholder="Enter Mobile No" required> <!-- th:field="*{emailId}" -->
+						</div>
+					</div>
+					
+					<div class="form-group row">
+						<label class="col-form-label col-4">Password</label>
+						<div class="col-6">
+							<input type="password" class="form-control" id="password" placeholder="Enter Password" required> <!-- th:field="*{password}" -->
+						</div>
+					</div>					
+					
+					<div>
+						<button type="submit" class="btn btn-primary">Sign Up</button>
+					</div>
+					
+				</div>
+			</form>
+			<div class="container text-center">
+				<div>
+					<h6>------------------------------------------------------------------------------------------</h6>
+				</div>
+			</div>
+			<div id="divSuccessMsg"></div>			
+			<div id="divRegistrationFailed"></div>
+			<br>
+			<div>
+				<h6>Already Registered! Please <a th:href="@{/login}">Login</a></h6>
+			</div>
+		</div>
+	</body>
+</html>

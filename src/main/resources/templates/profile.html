@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<meta charset="ISO-8859-1">
+	    <title>User Survey Management | Profile</title>
+	    <link rel="stylesheet" type="text/css" href="/webjars/bootstrap/css/bootstrap.min.css">
+	   	 <script src="/webjars/jquery/2.2.4/jquery.min.js"></script>
+	   	 <script src="/webjars/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+	   	 <script src="/webjars/popper.js/1.14.3/umd/popper.min.js"></script>		
+		 <script src="/profile_lib.js"></script>
+	</head>
+	<body>
+		<br>
+		<div class="container text-center">
+			<div>
+				<h6>Welcome to User Survey Management System</h6>				
+			</div><br>
+			<div id="divProfileEdit">
+				<div class="container text-center">
+					<div>
+						<h6>------------------------------------------------------------------------------------------</h6>
+					</div>
+				</div>				
+						
+				<form id="formUserUpdation" style="max-width: 600px; margin: 0 auto;"> 
+					<div class="m-3">
+						<div class="form-group row">
+							<label class="col-form-label col-4">User ID</label>
+							<div class="col-6">
+								<input type="text" class="form-control" id="id" required minlength=2 maxlength=20 disabled> 
+							</div>
+						</div>
+						
+						<div class="form-group row">
+							<label class="col-form-label col-4">First Name</label>
+							<div class="col-6">
+								<input type="text" class="form-control" id="firstName" placeholder="Enter First Name" required minlength=2 maxlength=20> 
+							</div>
+						</div>
+						
+						<div class="form-group row">
+							<label class="col-form-label col-4">Last Name</label>
+							<div class="col-6">
+								<input type="text" class="form-control" id="lastName" placeholder="Enter Last Name" required minlength=2 maxlength=20> 
+							</div>
+						</div>
+						
+						<div class="form-group row">
+							<label class="col-form-label col-4">Email ID</label>
+							<div class="col-6">
+								<input type="email" class="form-control" id="emailId" placeholder="Enter Email Id" required disabled> 
+							</div>
+						</div>
+						
+						<div class="form-group row">
+							<label class="col-form-label col-4">Mobile No</label>
+							<div class="col-6">
+								<input type="mobile" class="form-control" id="mobile" placeholder="Enter Mobile No" required> 
+							</div>
+						</div>
+						
+						<div class="form-group row">
+							<label class="col-form-label col-4">Password</label>
+							<div class="col-6">
+								<input type="password" class="form-control" id="password" placeholder="Enter Password" required disabled> 
+							</div>
+						</div>					
+						
+						<div>
+							<button type="submit" class="btn btn-primary">Update</button>
+						</div>
+						
+					</div>
+				</form>			
+				<div class="container text-center">
+					<div>
+						<h6>------------------------------------------------------------------------------------------</h6>
+					</div>
+				</div>
+			</div>
+			
+			<div id="divSuccessMsg"></div>			
+			<div id="divRegistrationFailed"></div>
+			<br>
+			<div class="container text-center m-3">
+					<button type="button" class="btn btn-success btn-block" id="openSurvey">Open Survey Section</button>
+			</div>			
+		</div>
+	</body>
+</html>
